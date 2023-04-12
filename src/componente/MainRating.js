@@ -30,7 +30,7 @@ const RatingView = () => {
             recomiendes Sysdatec a un colega o amigo?
           </p>
         </div>
-        <div className="probabilidad d-flex justify-content-around p-3">
+        <div className="probabilidad d-flex justify-content-between p-3">
           <label>Poco Probable</label>
           <label>Muy Probable</label>
         </div>

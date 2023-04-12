@@ -45,7 +45,7 @@ h2 {
 .cajaEncuesta {
   height: 50%;
   width: 100%;
-  margin: 100px 20px;
+  margin: 50px auto;
 }
 .parrafoEncuesta {
   color: var(--nav-color);
@@ -69,4 +69,8 @@ h2 {
 
 .swal2-styled.swal2-confirm {
   background-color: var(--bottom-color) !important;
+}
+
+.estrellasCalificacionContainer {
+  text-align: center;
 }

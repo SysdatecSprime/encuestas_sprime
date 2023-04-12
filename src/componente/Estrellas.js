@@ -7,7 +7,7 @@ const EstrellasCalificacion = ({ onChange }) => {
   const [hoverRating, setHoverRating] = useState(null);
 
   return (
-    <>
+    <div className="estrellasCalificacionContainer">
       {[...Array(10)].map((star, i) => {
         const ratingValue = i + 1;
         return (
@@ -27,14 +27,14 @@ const EstrellasCalificacion = ({ onChange }) => {
               color={
                 ratingValue <= (hoverRating || rating) ? "#ffc107" : "#e4e5e9"
               }
-              size={50}
+              size={"4.5vw"}
               onMouseEnter={() => setHoverRating(ratingValue)}
               onMouseLeave={() => setHoverRating(null)}
             />
           </label>
         );
       })}
-    </>
+    </div>
   );
 };
 export default EstrellasCalificacion;
