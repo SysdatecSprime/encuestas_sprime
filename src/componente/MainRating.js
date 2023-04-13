@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import EstrellasCalificacion from "./Estrellas";
 import FormRating from "./FormRating";
 import Mensaje from "./Mensaje";
+import imagen from "../imagen/Sysdatec.png";
 
 const RatingView = () => {
   const [rating, setRating] = useState(0);
@@ -14,7 +15,8 @@ const RatingView = () => {
       <div className="cajaEncuesta shadow p-3 mb-5 bg-body-tertiary rounded p-5">
         <div className="tituloEncuesta">
           <h2>
-            ¡Hola! Nos gustaría conocer cómo ha sido tu experiencia con Sysdatec
+            ¡Hola! Nos gustaría conocer cómo ha sido tu experiencia con:{" "}
+            <img src={imagen} />
           </h2>
         </div>
         <div className="parrafoEncuesta p-4">
@@ -34,7 +36,6 @@ const RatingView = () => {
           <label>Poco Probable</label>
           <label>Muy Probable</label>
         </div>
-
         <div className="estrellasEncuesta d-flex justify-content-center">
           <EstrellasCalificacion onChange={handleRatingChange} />
         </div>
