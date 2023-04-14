@@ -1,5 +1,7 @@
 const FormRating = props => {
   const pregunta = props.pregunta;
+  const comentario = props.comentario;
+  const setComentario = props.setComentario;
   return (
     <>
       <div>
@@ -9,6 +11,8 @@ const FormRating = props => {
         <textarea
           className="form-control"
           id="exampleFormControlTextarea1"
+          value={comentario}
+          onChange={e => setComentario(e.target.value)}
           rows="3"></textarea>
       </div>
     </>
