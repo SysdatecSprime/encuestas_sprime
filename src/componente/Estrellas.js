@@ -31,6 +31,7 @@ const EstrellasCalificacion = ({ onChange }) => {
               onMouseEnter={() => setHoverRating(ratingValue)}
               onMouseLeave={() => setHoverRating(null)}
             />
+            <div className="starNumber">{ratingValue}</div>
           </label>
         );
       })}

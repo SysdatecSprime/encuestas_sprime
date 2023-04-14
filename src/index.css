@@ -41,6 +41,14 @@ h2 {
   display: none;
 }
 
+.starNumber {
+  top: 50%; /* Alinear verticalmente en el centro */
+  left: 50%; /* Alinear horizontalmente en el centro */
+
+  font-size: 12px; /* Tamaño de fuente del número */
+  color: #000; /* Color del número */
+}
+
 .labelStar {
   justify-content: center;
   align-items: center;
