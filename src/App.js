@@ -6,7 +6,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/:empresa" element={<RatingView />} />
+        <Route path="/" element={<RatingView />} />
       </Routes>
     </BrowserRouter>
   );
