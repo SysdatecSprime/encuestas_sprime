@@ -42,11 +42,10 @@ h2 {
 }
 
 .starNumber {
-  top: 50%; /* Alinear verticalmente en el centro */
-  left: 50%; /* Alinear horizontalmente en el centro */
-
-  font-size: 12px; /* Tamaño de fuente del número */
-  color: #000; /* Color del número */
+  top: 50%; 
+  left: 50%; 
+  font-size: 12px; 
+  color: #000; 
 }
 
 .labelStar {
