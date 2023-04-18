@@ -9,9 +9,9 @@ const RatingView = () => {
   const [rating, setRating] = useState(0);
   const [comentario, setComentario] = useState("");
   const location = useLocation();
-  const empresa = location.pathname.slice(1).toLowerCase();
+  const empresa = location.search.split("?")[1].split("=")[1].toLowerCase();
 
-  const handleRatingChange = newRating => {
+  const handleRatingChange = (newRating) => {
     setRating(newRating);
   };
   return (
@@ -79,7 +79,8 @@ const RatingView = () => {
               <button
                 type="button"
                 className="btn btn-primary btn-lg botonEncuesta"
-                onClick={() => Mensaje(rating, comentario, empresa)}>
+                onClick={() => Mensaje(rating, comentario, empresa)}
+              >
                 Enviar
               </button>
             </div>
