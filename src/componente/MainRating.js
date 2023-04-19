@@ -9,7 +9,8 @@ const RatingView = () => {
   const [rating, setRating] = useState(0);
   const [comentario, setComentario] = useState("");
   const location = useLocation();
-  const empresa = location.search.split("?")[1].split("=")[1].toLowerCase();
+  const empresa =
+    location?.search?.split("?")[1]?.split("=")[1]?.toLowerCase() || "";
 
   const handleRatingChange = (newRating) => {
     setRating(newRating);
