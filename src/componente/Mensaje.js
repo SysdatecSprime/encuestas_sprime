@@ -1,6 +1,7 @@
 import Swal from "sweetalert2";
 import { api } from "../utils/urls";
-async function Mensaje(rating, descripcion, empresa) {
+async function Mensaje(rating, descripcion, empresa, setLoading) {
+  setLoading(true);
   await fetch(api + "/api/Encuestas", {
     method: "POST",
     headers: {
@@ -16,6 +17,7 @@ async function Mensaje(rating, descripcion, empresa) {
       fechaRegistro: new Date().toISOString(),
     }),
   });
+  setLoading(false);
 
   Swal.fire({
     title: "Gracias por tu ayuda.",

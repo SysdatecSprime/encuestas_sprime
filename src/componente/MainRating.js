@@ -8,6 +8,7 @@ import { useLocation } from "react-router-dom";
 const RatingView = () => {
   const [rating, setRating] = useState(0);
   const [comentario, setComentario] = useState("");
+  const [loading, setLoading] = useState(false);
   const location = useLocation();
   const empresa =
     location?.search?.split("?")[1]?.split("=")[1]?.toLowerCase() || "";
@@ -18,7 +19,7 @@ const RatingView = () => {
   return (
     <div className="container">
       <div className="d-flex justify-content-center mt-5">
-        <img src={imagen} className="sysdatecImg" />
+        <img src={imagen} className="sysdatecImg" alt="Logo de Sysdatec" />
       </div>
       <div className="cajaEncuesta shadow p-3 mb-5 bg-body-tertiary rounded p-5">
         <div className="tituloEncuesta">
@@ -80,7 +81,8 @@ const RatingView = () => {
               <button
                 type="button"
                 className="btn btn-primary btn-lg botonEncuesta"
-                onClick={() => Mensaje(rating, comentario, empresa)}
+                onClick={() => Mensaje(rating, comentario, empresa, setLoading)}
+                disabled={loading}
               >
                 Enviar
               </button>
